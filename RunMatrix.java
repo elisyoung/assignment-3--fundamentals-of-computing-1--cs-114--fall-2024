@@ -17,7 +17,12 @@ public class RunMatrix {
 
     input.close();
 
+    Matrix myMatrix = new Matrix(matrixSize);
+
+    System.out.println(myMatrix.getMatrix());
 
 
   }
+
+
 }
