@@ -20,5 +20,15 @@ public class Matrix {
     return matrixValues;
   }
 
+  public void populate() {
+    int value = 1;
+
+    for (int row = 0; row < myMatrix.length; row++) {
+      for (int col = 0; col < myMatrix[row].length; col++) {
+        myMatrix[row][col] = value++;
+      }
+    }
+  }
+
 
 }

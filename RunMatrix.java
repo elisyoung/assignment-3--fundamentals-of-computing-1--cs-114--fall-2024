@@ -18,9 +18,9 @@ public class RunMatrix {
     input.close();
 
     Matrix myMatrix = new Matrix(matrixSize);
-
     System.out.println(myMatrix.getMatrix());
-
+    myMatrix.populate();
+    System.out.println(myMatrix.getMatrix());
 
   }
 
