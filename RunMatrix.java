@@ -21,6 +21,8 @@ public class RunMatrix {
     System.out.println(myMatrix.getMatrix());
     myMatrix.populate();
     System.out.println(myMatrix.getMatrix());
+    myMatrix.swapValues();
+    System.out.println(myMatrix.getMatrix());
 
   }
 
