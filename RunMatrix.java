@@ -20,14 +20,17 @@ public class RunMatrix {
 
     //creates a Matrix object and carries out its methods
     Matrix myMatrix = new Matrix(matrixSize);
-    System.out.println("Printing matrix with default values:" + myMatrix.printMatrix());
+    System.out.print("Printing matrix with default values:");
+    myMatrix.printMatrix();
 
-    myMatrix.populateMatrix();
     System.out.println("Populating values...\n");
-    System.out.println("Printing matrix:" + myMatrix.printMatrix());
+    myMatrix.populateMatrix();
+    System.out.print("Printing matrix:");
+    myMatrix.printMatrix();
 
-    myMatrix.flipMatrix();
     System.out.println("Flipping matrix...\n");
-    System.out.println("Printing flipped matrix:" + myMatrix.printMatrix());
+    myMatrix.flipMatrix();
+    System.out.print("Printing flipped matrix:");
+    myMatrix.printMatrix();
   }
 }

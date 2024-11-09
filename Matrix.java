@@ -9,7 +9,7 @@ public class Matrix {
   }
 
   //returns the matrix as a string with the diagonal highlighted
-  public String printMatrix() {
+  public void printMatrix() {
     String matrixValues = "\n";
     for (int row = 0; row < matrix.length; row++) {
       for (int col = 0; col < matrix[row].length; col++) {
@@ -23,7 +23,7 @@ public class Matrix {
       matrixValues = matrixValues.concat("\n");
     }
 
-    return matrixValues;
+    System.out.println(matrixValues);
   }
 
   //populates the matrix with values from 1 to (size × size)
