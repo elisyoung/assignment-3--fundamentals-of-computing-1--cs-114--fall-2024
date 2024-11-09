@@ -6,7 +6,7 @@ public class RunMatrix {
 
     //get a value from the user
     Scanner input = new Scanner(System.in);
-    System.out.print("Enter a positive integer: ");
+    System.out.print("\nEnter the size of your matrix: ");
     matrixSize = input.nextInt();
     System.out.println();
 
@@ -20,11 +20,15 @@ public class RunMatrix {
 
     //creates a Matrix object and carries out its methods
     Matrix myMatrix = new Matrix(matrixSize);
-    System.out.println(myMatrix.printMatrix());
+    System.out.println("Printing matrix with default values:" + myMatrix.printMatrix());
+
     myMatrix.populateMatrix();
-    System.out.println(myMatrix.printMatrix());
+    System.out.println("Populating values...\n");
+    System.out.println("Printing matrix:" + myMatrix.printMatrix());
+
     myMatrix.flipMatrix();
-    System.out.println(myMatrix.printMatrix());
+    System.out.println("Flipping matrix...\n");
+    System.out.println("Printing flipped matrix:" + myMatrix.printMatrix());
 
   }
 

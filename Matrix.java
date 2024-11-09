@@ -5,7 +5,7 @@ public class Matrix {
   public Matrix(int size) {
     int matrixSize = size;
     matrix = new int[matrixSize][matrixSize];
-    System.out.println("Your matrix is " + matrix.length + " x " + matrix.length);
+    System.out.println("Your matrix is " + matrix.length + " x " + matrix.length + "\n");
   }
 
   //returns the matrix as a string with the diagonal highlighted
