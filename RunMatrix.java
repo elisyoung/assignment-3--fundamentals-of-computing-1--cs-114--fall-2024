@@ -29,8 +29,5 @@ public class RunMatrix {
     myMatrix.flipMatrix();
     System.out.println("Flipping matrix...\n");
     System.out.println("Printing flipped matrix:" + myMatrix.printMatrix());
-
   }
-
-
 }
