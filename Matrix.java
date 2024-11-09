@@ -1,8 +1,8 @@
 public class Matrix {
   private int[][] matrix;
 
-  public Matrix(int matrixDimension) {
-    int matrixSize = matrixDimension;
+  public Matrix(int size) {
+    int matrixSize = size;
     matrix = new int[matrixSize][matrixSize];
   }
 
