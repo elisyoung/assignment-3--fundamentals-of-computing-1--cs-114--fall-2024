@@ -1,18 +1,20 @@
 public class Matrix {
-  private String matrixValues;
   private int[][] myMatrix;
-  private int matrixSize;
 
   public Matrix(int matrixDimension) {
-    matrixSize = matrixDimension;
+    int matrixSize = matrixDimension;
     myMatrix = new int[matrixSize][matrixSize];
   }
 
   public String getMatrix() {
-    matrixValues = "\n";
+    String matrixValues = "\n";
     for (int row = 0; row < myMatrix.length; row++) {
       for (int col = 0; col < myMatrix[row].length; col++) {
-        matrixValues = matrixValues.concat(myMatrix[row][col] + "\t");
+        if(row + col != (myMatrix.length - 1)){
+          matrixValues = matrixValues.concat(myMatrix[row][col] + "\t");
+        } else {
+          matrixValues = matrixValues.concat("\u001B[33m" + myMatrix[row][col] + "\u001B[0m \t");
+        }
       }
       matrixValues = matrixValues.concat("\n");
     }
@@ -35,15 +37,13 @@ public class Matrix {
 
     for(int row = 0; row < ((myMatrix.length + 1) / 2); row++){
       for (int col = 0; col < myMatrix[row].length; col++){
-        if(row == matrixSize / 2 && col == matrixSize / 2){
+        if(row == myMatrix.length / 2 && col == myMatrix.length / 2){
           break;
         } else {
-          if(row + col != (matrixSize - 1)){
+          if(row + col != (myMatrix.length - 1)){
             topHalfValue = myMatrix[row][col];
-            myMatrix[row][col] = myMatrix[(matrixSize - 1) - row][(matrixSize - 1) - col];
-            myMatrix[(matrixSize - 1) - row][(matrixSize - 1) - col] = topHalfValue;
-          } else {
-            //highlight this number
+            myMatrix[row][col] = myMatrix[(myMatrix.length - 1) - row][(myMatrix.length - 1) - col];
+            myMatrix[(myMatrix.length - 1) - row][(myMatrix.length - 1) - col] = topHalfValue;
           }
         }
       }
