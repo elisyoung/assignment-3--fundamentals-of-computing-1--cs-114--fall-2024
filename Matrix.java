@@ -42,14 +42,22 @@ public class Matrix {
           break;
         } else {
           if(row + col != (matrix.length - 1)){
-            topHalfValue = matrix[row][col];
-            matrix[row][col] = matrix[(matrix.length - 1) - row][(matrix.length - 1) - col];
-            matrix[(matrix.length - 1) - row][(matrix.length - 1) - col] = topHalfValue;
+            swap(row, col, ((matrix.length - 1) - row), ((matrix.length - 1) - col));
           }
         }
       }
     }
   }
 
+  private void swap(int x1, int y1, int x2, int y2) {
+    int row1 = x1;
+    int col1 = y1;
+    int row2 = x2;
+    int col2 = y2;
+
+    int value = matrix[x1][y1];
+    matrix[x1][y1] = matrix[x2][y2];
+    matrix[x2][y2] = value;
+  }
 
 }
