@@ -17,6 +17,7 @@ public class Matrix {
           matrixValues = matrixValues.concat(matrix[row][col] + "\t");
         }
       }
+
       matrixValues = matrixValues.concat("\n");
     }
 
@@ -59,5 +60,4 @@ public class Matrix {
     matrix[x1][y1] = matrix[x2][y2];
     matrix[x2][y2] = value;
   }
-
 }
