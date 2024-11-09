@@ -1,19 +1,19 @@
 public class Matrix {
-  private int[][] myMatrix;
+  private int[][] matrix;
 
   public Matrix(int matrixDimension) {
     int matrixSize = matrixDimension;
-    myMatrix = new int[matrixSize][matrixSize];
+    matrix = new int[matrixSize][matrixSize];
   }
 
   public String getMatrix() {
     String matrixValues = "\n";
-    for (int row = 0; row < myMatrix.length; row++) {
-      for (int col = 0; col < myMatrix[row].length; col++) {
-        if(row + col != (myMatrix.length - 1)){
-          matrixValues = matrixValues.concat(myMatrix[row][col] + "\t");
+    for (int row = 0; row < matrix.length; row++) {
+      for (int col = 0; col < matrix[row].length; col++) {
+        if(row + col != (matrix.length - 1)){
+          matrixValues = matrixValues.concat(matrix[row][col] + "\t");
         } else {
-          matrixValues = matrixValues.concat("\u001B[33m" + myMatrix[row][col] + "\u001B[0m \t");
+          matrixValues = matrixValues.concat("\u001B[33m" + matrix[row][col] + "\u001B[0m \t");
         }
       }
       matrixValues = matrixValues.concat("\n");
@@ -25,9 +25,9 @@ public class Matrix {
   public void populate() {
     int value = 1;
 
-    for (int row = 0; row < myMatrix.length; row++) {
-      for (int col = 0; col < myMatrix[row].length; col++) {
-        myMatrix[row][col] = value++;
+    for (int row = 0; row < matrix.length; row++) {
+      for (int col = 0; col < matrix[row].length; col++) {
+        matrix[row][col] = value++;
       }
     }
   }
@@ -35,15 +35,15 @@ public class Matrix {
   public void swapValues() {
     int topHalfValue;
 
-    for(int row = 0; row < ((myMatrix.length + 1) / 2); row++){
-      for (int col = 0; col < myMatrix[row].length; col++){
-        if(row == myMatrix.length / 2 && col == myMatrix.length / 2){
+    for(int row = 0; row < ((matrix.length + 1) / 2); row++){
+      for (int col = 0; col < matrix[row].length; col++){
+        if(row == matrix.length / 2 && col == matrix.length / 2){
           break;
         } else {
-          if(row + col != (myMatrix.length - 1)){
-            topHalfValue = myMatrix[row][col];
-            myMatrix[row][col] = myMatrix[(myMatrix.length - 1) - row][(myMatrix.length - 1) - col];
-            myMatrix[(myMatrix.length - 1) - row][(myMatrix.length - 1) - col] = topHalfValue;
+          if(row + col != (matrix.length - 1)){
+            topHalfValue = matrix[row][col];
+            matrix[row][col] = matrix[(matrix.length - 1) - row][(matrix.length - 1) - col];
+            matrix[(matrix.length - 1) - row][(matrix.length - 1) - col] = topHalfValue;
           }
         }
       }
