@@ -7,7 +7,7 @@ public class Matrix {
     System.out.println("Your matrix is " + matrix.length + " x " + matrix.length);
   }
 
-  public String getMatrix() {
+  public String printMatrix() {
     String matrixValues = "\n";
     for (int row = 0; row < matrix.length; row++) {
       for (int col = 0; col < matrix[row].length; col++) {
@@ -23,7 +23,7 @@ public class Matrix {
     return matrixValues;
   }
 
-  public void populate() {
+  public void populateMatrix() {
     int value = 1;
 
     for (int row = 0; row < matrix.length; row++) {
@@ -33,7 +33,7 @@ public class Matrix {
     }
   }
 
-  public void swapValues() {
+  public void flipMatrix() {
     int topHalfValue;
 
     for(int row = 0; row < ((matrix.length + 1) / 2); row++){

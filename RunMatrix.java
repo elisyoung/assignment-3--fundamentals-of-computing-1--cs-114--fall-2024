@@ -18,11 +18,11 @@ public class RunMatrix {
     input.close();
 
     Matrix myMatrix = new Matrix(matrixSize);
-    System.out.println(myMatrix.getMatrix());
-    myMatrix.populate();
-    System.out.println(myMatrix.getMatrix());
-    myMatrix.swapValues();
-    System.out.println(myMatrix.getMatrix());
+    System.out.println(myMatrix.printMatrix());
+    myMatrix.populateMatrix();
+    System.out.println(myMatrix.printMatrix());
+    myMatrix.flipMatrix();
+    System.out.println(myMatrix.printMatrix());
 
   }
 
