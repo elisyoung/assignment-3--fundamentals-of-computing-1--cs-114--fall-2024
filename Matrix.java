@@ -4,6 +4,7 @@ public class Matrix {
   public Matrix(int size) {
     int matrixSize = size;
     matrix = new int[matrixSize][matrixSize];
+    System.out.println("Your matrix is " + matrix.length + " x " + matrix.length);
   }
 
   public String getMatrix() {
@@ -49,5 +50,6 @@ public class Matrix {
       }
     }
   }
+
 
 }
