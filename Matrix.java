@@ -35,8 +35,6 @@ public class Matrix {
   }
 
   public void flipMatrix() {
-    int topHalfValue;
-
     for(int row = 0; row < ((matrix.length + 1) / 2); row++){
       for (int col = 0; col < matrix[row].length; col++){
         if(row == matrix.length / 2 && col == matrix.length / 2){
