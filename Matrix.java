@@ -1,12 +1,14 @@
 public class Matrix {
   private int[][] matrix;
 
+  //Constructor: sets up the matrix and prints the size
   public Matrix(int size) {
     int matrixSize = size;
     matrix = new int[matrixSize][matrixSize];
     System.out.println("Your matrix is " + matrix.length + " x " + matrix.length);
   }
 
+  //returns the matrix as a string with the diagonal highlighted
   public String printMatrix() {
     String matrixValues = "\n";
     for (int row = 0; row < matrix.length; row++) {
@@ -24,6 +26,7 @@ public class Matrix {
     return matrixValues;
   }
 
+  //populates the matrix with values from 1 to (size × size)
   public void populateMatrix() {
     int value = 1;
 
@@ -34,20 +37,18 @@ public class Matrix {
     }
   }
 
+  //flips the matrix values across the diagonal, skipping over values in the diagonal
   public void flipMatrix() {
     for(int row = 0; row < ((matrix.length + 1) / 2); row++){
-      for (int col = 0; col < matrix[row].length; col++){
-        if(row == matrix.length / 2 && col == matrix.length / 2){
-          break;
-        } else {
-          if(row + col != (matrix.length - 1)){
-            swap(row, col, ((matrix.length - 1) - row), ((matrix.length - 1) - col));
-          }
+      for (int col = 0; (col < matrix[row].length) && ((row != matrix.length / 2) || (col != matrix.length / 2)); col++){
+        if(row + col != (matrix.length - 1)){  //no change to values in the diagonal
+          swap(row, col, ((matrix.length - 1) - row), ((matrix.length - 1) - col));
         }
       }
     }
   }
 
+  //swaps the values of matrix[x1][y1] and matrix[x2][y2]
   private void swap(int x1, int y1, int x2, int y2) {
     int row1 = x1;
     int col1 = y1;

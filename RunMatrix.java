@@ -10,6 +10,7 @@ public class RunMatrix {
     matrixSize = input.nextInt();
     System.out.println();
 
+    //checks that the input is positive
     while(matrixSize < 1){
       System.out.print("This value is not positive, enter a positive integer: ");
       matrixSize = input.nextInt();
@@ -17,6 +18,7 @@ public class RunMatrix {
 
     input.close();
 
+    //creates a Matrix object and carries out its methods
     Matrix myMatrix = new Matrix(matrixSize);
     System.out.println(myMatrix.printMatrix());
     myMatrix.populateMatrix();
