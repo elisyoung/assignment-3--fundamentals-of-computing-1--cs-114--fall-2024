@@ -13,7 +13,7 @@ public class Matrix {
     String matrixValues = "\n";
     for (int row = 0; row < matrix.length; row++) {
       for (int col = 0; col < matrix[row].length; col++) {
-        if(row + col == (matrix.length - 1)){
+        if(row + col == (matrix.length - 1)){    //highlights the diagonal
           matrixValues = matrixValues.concat("\u001B[33m" + matrix[row][col] + "\u001B[0m \t");
         } else {
           matrixValues = matrixValues.concat(matrix[row][col] + "\t");
