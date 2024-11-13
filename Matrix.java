@@ -12,8 +12,8 @@ public class Matrix {
   public void printMatrix() {
     final String YELLOW = "\u001B[33m";
     final String RESET = "\u001B[0m";
-
     String matrixValues = "\n";
+
     for (int row = 0; row < matrix.length; row++) {
       for (int col = 0; col < matrix[row].length; col++) {
         if(row + col == (matrix.length - 1)){    //highlights the diagonal
@@ -57,9 +57,10 @@ public class Matrix {
     int col1 = y1;
     int row2 = x2;
     int col2 = y2;
+    int valueToSwap;
 
-    int value = matrix[x1][y1];
+    valueToSwap = matrix[x1][y1];
     matrix[x1][y1] = matrix[x2][y2];
-    matrix[x2][y2] = value;
+    matrix[x2][y2] = valueToSwap;
   }
 }
